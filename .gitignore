@@ -5,3 +5,10 @@ __pycache__/
 *.pyc
 # Ignore environment files
 .env
+
+# System cache files
+.DS_Store
+**/.DS_Store
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+.Rhistory
