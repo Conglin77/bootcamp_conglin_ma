@@ -12,3 +12,6 @@ __pycache__/
 .ipynb_checkpoints/
 **/.ipynb_checkpoints/
 .Rhistory
+
+# Ignore data files but keep directory structure
+data/*
