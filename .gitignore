@@ -15,3 +15,6 @@ __pycache__/
 
 # Ignore data files but keep directory structure
 data/*
+
+# Secret Environment Variables
+.env
