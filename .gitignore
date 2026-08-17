@@ -18,3 +18,5 @@ data/*
 
 # Secret Environment Variables
 .env
+.venv/
+project/data/*
