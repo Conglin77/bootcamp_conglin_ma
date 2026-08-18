@@ -51,3 +51,19 @@ project/
 ├── src/
 ├── docs/
 └── README.md
+## Data Storage
+
+This project uses separate folders for raw and processed data.
+
+- `data/raw/` stores raw CSV files.
+- `data/processed/` stores processed Parquet files.
+- Storage paths are configured using environment variables:
+  - `DATA_DIR_RAW`
+  - `DATA_DIR_PROCESSED`
+
+The saved files are reloaded and validated by checking:
+- DataFrame shape
+- Important column data types
+
+CSV is used for raw data because it is simple and widely compatible.
+Parquet is used for processed data because it is more efficient and preserves data types well.
