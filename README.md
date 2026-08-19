@@ -67,3 +67,19 @@ The saved files are reloaded and validated by checking:
 
 CSV is used for raw data because it is simple and widely compatible.
 Parquet is used for processed data because it is more efficient and preserves data types well.
+## Data Cleaning Strategy
+
+For Stage 06, the preprocessing workflow includes:
+
+- Filling missing numeric values with the median.
+- Dropping rows with excessive missing data.
+- Normalizing numeric columns using MinMax scaling.
+- Saving the cleaned dataset to `data/processed/`.
+
+The main numeric columns cleaned were `age`, `income`, and `score`.
+
+Assumptions:
+- Median imputation is appropriate for the selected numeric columns.
+- Rows with too much missing information are not reliable enough to keep.
+- `zipcode` and `city` are not normalized because they are identifiers/categorical data.
+- `extra_data` was removed because most of its values were missing.
